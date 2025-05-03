@@ -98,3 +98,125 @@ Below is a list of the main technologies used in this project, along with a brie
 - **Jenkins**: An open-source automation server used to build, test, and deploy the project continuously (CI/CD pipeline).
 
 - **Git & GitHub**: Git is a version control system used to track changes in source code. GitHub is a platform for hosting Git repositories and collaborating on code with others.
+
+##Database Design
+
+---
+
+### 1. **User**
+
+Represents the people using the platform, either as guests or hosts.
+
+**Key Fields:**
+
+- `id`: Unique identifier
+- `name`: Full name of the user
+- `email`: Email address
+- `role`: Defines if the user is a guest or a host
+- `created_at`: Registration date
+
+**Relationships:**
+
+- A user can list multiple properties (if host).
+- A user can make multiple bookings (if guest).
+- A user can write multiple reviews.
+
+---
+
+### 2. **Property**
+
+Represents a listing available for booking.
+
+**Key Fields:**
+
+- `id`: Unique identifier
+- `title`: Property title
+- `description`: Details about the property
+- `price_per_night`: Cost per night
+- `host_id`: Linked to the user who owns the property
+
+**Relationships:**
+
+- A property belongs to one host (user).
+- A property can have many bookings.
+- A property can have multiple reviews.
+
+---
+
+### 3. **Booking**
+
+Represents a reservation made by a user for a property.
+
+**Key Fields:**
+
+- `id`: Unique identifier
+- `user_id`: The guest who made the booking
+- `property_id`: The booked property
+- `start_date`: Check-in date
+- `end_date`: Check-out date
+
+**Relationships:**
+
+- A booking belongs to one user (guest).
+- A booking is for one property.
+
+---
+
+### 4. **Review**
+
+Captures feedback from a guest after a stay.
+
+**Key Fields:**
+
+- `id`: Unique identifier
+- `user_id`: The guest who wrote the review
+- `property_id`: The reviewed property
+- `rating`: Numeric score (e.g., 1–5)
+- `comment`: Textual feedback
+
+**Relationships:**
+
+- A review is written by a user.
+- A review is associated with a property.
+
+---
+
+### 5. **Payment**
+
+Tracks financial transactions related to bookings.
+
+**Key Fields:**
+
+- `id`: Unique identifier
+- `booking_id`: Associated booking
+- `amount`: Payment amount
+- `status`: Payment status (e.g., pending, completed)
+- `payment_date`: Date of payment
+
+**Relationships:**
+
+- A payment is linked to a booking.
+
+## Feature Breakdown
+
+This project includes several key features that work together to simulate a real-world Airbnb-like platform:
+
+### 1. User Management
+
+Users can register, log in, and manage their profiles. The system supports both guests and hosts, each with distinct permissions and capabilities.
+
+### 2. Property Management
+
+Hosts can list new properties with details like location, pricing, photos, and descriptions. They can also edit or remove listings as needed.
+
+### 3. Booking System
+
+Guests can browse properties, select dates, and book stays. The system ensures availability, calculates total costs, and stores booking details.
+
+### 4. Review and Rating System
+
+After a stay, guests can leave reviews and rate their experience. This helps other users make informed decisions and encourages quality among hosts.
+
+### 5. Payment Integration
+
+Secure payment processing is implemented for bookings. Users are charged based on stay duration and pricing, and transactions are tracked through a payment system.
