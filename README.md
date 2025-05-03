@@ -220,3 +220,15 @@ After a stay, guests can leave reviews and rate their experience. This helps oth
 ### 5. Payment Integration
 
 Secure payment processing is implemented for bookings. Users are charged based on stay duration and pricing, and transactions are tracked through a payment system.
+
+## CI/CD Pipeline
+
+CI/CD stands for Continuous Integration and Continuous Deployment. It is a development practice where code changes are automatically tested, built, and deployed to ensure faster and more reliable software delivery. This helps reduce bugs, improve code quality, and speed up development cycles.
+
+In this project, a CI/CD pipeline ensures that every code update is automatically tested and deployed without manual intervention. It allows the team to catch issues early, maintain consistency, and deliver new features faster.
+
+**Tools Used:**
+
+- **Docker**: Creates consistent development and production environments using containerization.
+- **Jenkins** : Can also be used for automating build and deployment tasks if preferred over GitHub Actions.
+- **GitHub Actions** _(optional)_: Automates workflows for testing, building, and deploying the application when changes are pushed to the repository.
