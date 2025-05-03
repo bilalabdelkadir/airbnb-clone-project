@@ -221,6 +221,32 @@ After a stay, guests can leave reviews and rate their experience. This helps oth
 
 Secure payment processing is implemented for bookings. Users are charged based on stay duration and pricing, and transactions are tracked through a payment system.
 
+## API Security
+
+Securing the API is a critical part of building a reliable and trustworthy platform. Below are the key security measures implemented in this project and their importance:
+
+### 1. Authentication
+
+Only registered users can access protected endpoints by using secure login methods like token-based authentication (e.g., JWT). This ensures that the system knows who is making each request and protects user accounts from unauthorized access.
+
+### 2. Authorization
+
+Role-based access control is used to restrict what actions a user can perform (e.g., only hosts can list properties, only guests can book). This prevents users from accessing or modifying data they do not own or have permission to use.
+
+### 3. Rate Limiting
+
+Rate limiting is applied to prevent abuse of the API by restricting the number of requests a user can make in a short time. This helps protect the platform from spam, denial-of-service (DoS) attacks, and excessive load.
+
+### 4. Input Validation and Sanitization
+
+All user input is validated and sanitized to prevent common attacks like SQL injection, XSS (Cross-Site Scripting), and data corruption. This maintains data integrity and system stability.
+
+### 5. Secure Payment Handling
+
+Sensitive financial transactions are securely processed using encryption and third-party payment gateways. This ensures the protection of payment data and builds user trust.
+
+By implementing these security practices, the platform ensures user privacy, data protection, and overall system reliability.
+
 ## CI/CD Pipeline
 
 CI/CD stands for Continuous Integration and Continuous Deployment. It is a development practice where code changes are automatically tested, built, and deployed to ensure faster and more reliable software delivery. This helps reduce bugs, improve code quality, and speed up development cycles.
