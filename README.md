@@ -82,3 +82,19 @@ DevOps Engineers manage the infrastructure and deployment processes. They automa
 ### 10. Database Administrator (DBA)
 
 DBAs are responsible for designing, implementing, and maintaining the database systems. They ensure data integrity, optimize performance, and manage backups and recovery.
+
+## Technology Stack
+
+Below is a list of the main technologies used in this project, along with a brief explanation of their purpose:
+
+- **Django**: A high-level Python web framework used to build secure and maintainable web applications quickly.
+
+- **Django REST Framework**: An extension of Django that helps build RESTful APIs easily, supporting features like authentication, serialization, and viewsets.
+
+- **GraphQL (Graphene-Django)**: A query language for APIs that allows clients to request only the data they need. Graphene-Django integrates GraphQL into Django applications.
+
+- **MySQL**: A relational database management system used to store and manage structured data for the application.
+
+- **Jenkins**: An open-source automation server used to build, test, and deploy the project continuously (CI/CD pipeline).
+
+- **Git & GitHub**: Git is a version control system used to track changes in source code. GitHub is a platform for hosting Git repositories and collaborating on code with others.
