@@ -45,4 +45,4 @@ Users can send and receive direct messages, facilitating communication between g
 
 ## 🖼 ER Diagram
 
-![ERD](./erd.svg)
+![ERD](./ERD/erd.svg)
