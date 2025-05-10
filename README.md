@@ -4,11 +4,11 @@
 
 A simple backend for an Airbnb clone built with:
 
-- **Django** and **Django REST Framework**
-- **MySQL** for the database
-- **GraphQL** (using Graphene-Django) and **REST API** support
+- **Django**  and **Django REST Framework** for backend development
+- **MySQL** as the database
+- **GraphQL** (using Graphene-Django) and **REST API** support for data querying
 - **Git** and **GitHub** for version control
-- **Jenkins** for CI/CD pipeline
+- **Jenkins** for continuous integration and deployment (CI/CD) pipeline
 
 This project provides both RESTful and GraphQL APIs for listing properties, booking management, and user authentication.
 
